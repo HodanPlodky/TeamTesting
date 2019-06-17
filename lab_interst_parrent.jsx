@@ -4,10 +4,10 @@ import Interestings from './interestings';
 
 class Lab_Interest_parrent extends Component {
     state = { 
-        interestings_data:[{id: 1, img: "img", text: "Some thing or another, fill be filled by backend"},
-                            {id: 2, img: "img", text: "Some thing or another, fill be filled by backend"}],
-        physics_data: [{id: 1, img: "img",text: "A bude se bušit!"}, {id: 2, img: "img", text: "A bude se bušit!"}],
-        chemistry_data: [{id: 1, img: "img", text: "Boom-clap-booom!"}, {id: 2, img: "img", text: "Boom-clap-booom!"}]
+        interesting_data: [{id:1, text: 'Matika',img: 'https://imgplaceholder.com/420x320/ff7f7f/333333/fa-image', subject: 1}, 
+                {id:2, img: 'https://imgplaceholder.com/420x320/ff7f7f/333333/fa-image', subject: 2},
+                {id:3, img: 'https://imgplaceholder.com/420x320/ff7f7f/333333/fa-image', subject: 2}, 
+                {id:4, img: 'https://imgplaceholder.com/420x320/ff7f7f/333333/fa-image', subject: 3}]
      }
     render() { 
         return ( <div> {this.choose_window()} </div> );
@@ -16,16 +16,13 @@ class Lab_Interest_parrent extends Component {
     choose_window = () =>{
         let subject = this.props.subject;
 
+        const tmp = this.state.interesting_data.find((e)=>e.subject === subject);
         //if math return math data
         if (subject == 1){
-            return <Interestings data={this.state.interestings_data} />;
-        }
-        //if physics return physics data
-        else if (subject == 2){
-            return <Laboratory data={this.state.physics_data}/>;
+            return <Interestings data={tmp} />;
         }
         else {
-            return <Laboratory data={this.state.chemistry_data}/>;
+            return <Laboratory data={tmp}/>;
         }
     }
 
