@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Interestings extends Component {
     render() { 
         return ( 
-            <div className="card mx-auto border">
+            <div className="card border">
                 <h1 className="mx-auto"> Zajímavosti </h1>
                 <img className="mx-auto" src={this.props.data.img} alt="Obrázek zajímavostí/pozadí"/>
                 <div className="mx-auto">
