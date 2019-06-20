@@ -14,7 +14,7 @@ class NavBar extends Component {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
                     <Link className="nav-item nav-link active" to="/">Home <span className="sr-only">(current)</span></Link>
-                    <Link className="nav-item nav-link" to="/about">About</Link>
+                    <Link className="nav-item nav-link" to="/notes">About</Link>
                     {this.handleAuthLinks()}
                 </div>
                 </div>
